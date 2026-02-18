@@ -698,7 +698,7 @@ function resetForm() {
 // ─── FETCH ──────────────────────────────────────────────
 async function fetchRecommendations(isRefresh=false) {
   if (!S.mood) { alert('기분은 꼭 선택해주세요! 🙏'); return; }
-  const apiKey = 'AIza여기에본인키입력';
+const apiKey = localStorage.getItem('pp_apikey');
   const situation = document.getElementById('situation-input').value;
   const purpose = document.getElementById('purpose-input').value;
   const btn = document.getElementById('submit-btn');
@@ -885,4 +885,5 @@ function removeHistory(id) {
 init();
 </script>
 </body>
+
 </html>
